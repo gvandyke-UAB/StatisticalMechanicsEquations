@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage{physics}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Stat Mech Bible} % Title of the assignment
+
+\author{Garrett Van Dyke\\ \texttt{gvandyke@uab.edu}} % Author name and email address
+
+\date{University of Alabama at Birmingham --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section*{Formulas} % Unnumbered section
+
+This is my attempt to catalog everything not included on the Statistical Mechanics qualifying exam equation sheets. Here we go.
+% Math equation/formula
+\begin{equation}
+	z=\sum_n e^{-\beta H_n} \text{    For when the phase space is quantized}
+\end{equation}
+
+\begin{equation}
+	z=\idotsint_{p_N, q_N} e^{-\beta H_N} \frac{dp_N dq_N}{\hbar^{3N}} \text{   For a continuous phase space}
+\end{equation}
+
+\begin{equation}
+	P(E_i)=\frac{1}{z}e^{-\beta E_i}
+\end{equation}
+
+\begin{equation}
+	g(E)=\sum_i \delta(E-E_i) \text{   For discrete energies}
+\end{equation}
+
+\begin{equation}
+	z=\int g(E)e^{-\beta E}dE
+\end{equation}
+
+\begin{equation}
+	F=-kT\ln z
+\end{equation}
+
+\begin{equation}
+	U=-\pdv{\beta}\ln(z)
+\end{equation}
+
+\begin{equation}
+	S=k\ln\Omega(E)=-\pdv{F}{T}
+\end{equation}
+
+\begin{equation}
+	\rho=-\pdv{F}{V}
+\end{equation}
+
+\begin{equation}
+	\mu=\pdv{F}{N}
+\end{equation}
+
+\begin{equation}
+	M=-kT\pdv{B}\ln z
+\end{equation}
+
+\begin{equation}
+	\chi=\pdv{M}{B}
+\end{equation}
+
+
+
+\end{document}

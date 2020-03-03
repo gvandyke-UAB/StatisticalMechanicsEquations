@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage{physics}
+\usepackage{commath}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Stat Mech Bible} % Title of the assignment
+
+\author{Garrett Van Dyke\\ \texttt{gvandyke@uab.edu}} % Author name and email address
+
+\date{University of Alabama at Birmingham --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+ % Unnumbered section
+
+This is my attempt to catalog everything not included on the Statistical Mechanics qualifying exam equation sheets. Here we go. \medskip
+
+\textbf{Let it be hereby known now and forevermore}: $z$ will denote fugacity, $Z$ will denote the canonical partition function, and $\mathcal{Z}$ will denote the Grand Canonical partition function. The qual equation sheet does it differently ($z$ for fugacity, $\mathcal{Z}$ for the partition function, and $\mathcal{Q}$ for the Grand Canonical partition function), but this is written to match in-class notes.\medskip
+
+\textbf{Let it also hereby be known now and forevermore}: Don't forget to add a factor of $\frac{1}{N!}$ on partition functions when your particles are indistinguishable.
+
+\section{General Math}
+\begin{equation}
+	\dif f(x,y)= \left(\pdv{f}{x}\right)\dif x + \left(\pdv{f}{y}\right)\dif y
+\end{equation}
+\begin{equation}
+	\left(\pdv{x}{y}\right)_z\left(\pdv{y}{z}\right)_x+\left(\pdv{x}{z}\right)_y=0
+\end{equation}
+
+
+\section{Formulas}
+\subsection{Canonical Ensemble: \normalfont Exchange of energy}
+\subsubsection{Specific to Ideal Gas}
+\begin{equation}
+	\Omega(E)=\frac{1}{N!}\alpha^N \frac{E}{N}V^N
+\end{equation}
+
+\begin{equation}
+	Z_N=\left(\frac{V}{\lambda^3}\right)^N
+\end{equation}
+\subsubsection{In General}
+\begin{equation}
+	\Omega(E): \text{Number of states for a given energy}
+\end{equation}
+
+\begin{equation}
+	Z=\sum_n e^{-\beta H_n}: \text{   For a quantized phase space}
+\end{equation}
+
+\begin{equation}
+	Z=\idotsint_{p_N, q_N} e^{-\beta H_N} \frac{\dif p_N \dif q_N}{\hbar^{3N}}: \text{   For a continuous phase space}
+\end{equation}
+
+\begin{equation}
+	P(E_i)=\frac{1}{Z}e^{-\beta E_i}
+\end{equation}
+
+\begin{equation}
+	\left\langle a \right\rangle=\int a \, P(a) \dif a
+\end{equation}
+
+\begin{equation}
+	g(E)=\sum_i \delta(E-E_i): \text{   For discrete energies}
+\end{equation}
+
+\begin{equation}
+	Z=\int g(E)e^{-\beta E}\dif E
+\end{equation}
+
+\begin{equation}
+	F=-kT\ln Z
+\end{equation}
+
+\begin{equation}
+	U=-\pdv{\beta}\ln Z
+\end{equation}
+
+\begin{equation}
+	S=-k\sum_i p_i \ln p_i=k\ln\Omega(E)=-\pdv{F}{T}
+\end{equation}
+
+\begin{equation}
+	p=-\pdv{F}{V}
+\end{equation}
+
+\begin{equation}
+	\mu=\pdv{F}{N}
+\end{equation}
+
+\begin{equation}
+	M=-kT\pdv{B}\ln Z
+\end{equation}
+
+\begin{equation}
+	\chi=\pdv{M}{B}\approx\frac{C}{T}\text{   where C is the Curie constant}
+\end{equation}
+
+\begin{equation}
+	c_V=\pdv{U}{T}=k\beta ^2\pdv[2]{\beta}\ln Z
+\end{equation}
+
+\subsection{Grand Canonical Ensemble: \normalfont Exchange of energy and number of particles}
+
+\begin{equation}
+	P(U,N)=\frac{1}{\mathcal{Z}}e^{-\beta(U-\mu N})
+\end{equation}
+
+\begin{equation}
+	\mathcal{Z}=\sum_U \sum_N e^{-\beta(U-\mu N})=\sum_N e^{\beta\mu N}Z_N=\sum_N Z_Nz^N
+\end{equation}
+
+\begin{equation}
+	\Phi_G=-kT\ln\mathcal{Z}
+\end{equation}
+
+\begin{equation}
+	U=\left.-\pdv{\beta}\ln\mathcal{Z}\right\rvert_z
+\end{equation}
+
+\begin{equation}
+	N=z\pdv{z}\ln\mathcal{Z}=-\pdv{\Phi_G}{\mu}
+\end{equation}
+
+\begin{equation}
+	p=\frac{\Phi_G}{V}
+\end{equation}
+
+\section{Energies}
+
+Thermodynamic Potential:
+\begin{equation}
+	U(S, V, N)
+\end{equation}
+%
+Helmholtz Free Energy:
+\begin{equation}
+	F(T, V, N)=U-TS
+\end{equation}
+%
+Gibbs Free Energy:
+\begin{equation}
+	G(T, p, N)=U-TS-pV
+\end{equation}
+%
+Grand Potential:
+\begin{equation}
+	\Phi_G(T, V, \mu)=U-TS-\mu N
+\end{equation}
+
+\end{document}
